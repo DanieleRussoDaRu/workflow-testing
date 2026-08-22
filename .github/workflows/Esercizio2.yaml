@@ -7,8 +7,7 @@ jobs:
       - name: Checkout del codice
         uses: actions/checkout@v4
 
-      - name: Assegnazione variabile 
-        env: UTENTE="Daniele"
-
-      - name: Stampa a video un testo
-        run: echo 'Ciao $UTENTE, il workflow sta funzionando'
+      - name: Stampa a schermo una certa variabile
+        env:
+          UTENTE: Daniele
+        run: echo Ciao $UTENTE, come ti senti oggi?
