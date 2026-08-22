@@ -1,0 +1,19 @@
+name: Esercizio 3 - Pipeline
+on: [push]
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+
+      - name: Stampa a video
+        run: echo "Compilazione dell'applicazione in corso"
+
+  test-job:
+    runs-on: ubuntu-latest
+    needs: build-job
+    steps:
+      - name: Testi unitari
+        run: echo "Esecuzione dei test unitari.."
