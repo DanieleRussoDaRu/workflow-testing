@@ -5,4 +5,4 @@ jobs:
   job-1:
     runs-on: linux-ubuntu
     steps:
-      - echo 'Hello world'
+      - run: echo 'Hello world'
