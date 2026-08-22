@@ -6,3 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Hello world'
+  job-2:
+    runs-on: ubuntu-latest
+    if: contains( github.repository,  'test')
+    steps:
+    - run: echo 'I found it' 
