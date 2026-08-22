@@ -1,0 +1,14 @@
+name: Esercizio 2 - Variabili
+on: [push]
+jobs: 
+  job-variabili:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codice
+        uses: actions/checkout@v4
+
+      - name: Assegnazione variabile 
+        env: UTENTE="Daniele"
+
+      - name: Stampa a video un testo
+        run: echo 'Ciao $UTENTE, il workflow sta funzionando'
