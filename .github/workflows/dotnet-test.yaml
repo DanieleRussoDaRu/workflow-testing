@@ -1,0 +1,15 @@
+name: Esercizio 1 - Hello World
+on: [push]
+
+jobs:
+  welcome-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del codice
+        uses: action/checkout@v4
+      
+      - name: Messaggi di testo
+        run: echo "Oggi è stata una bella giornata\n
+              ..mia sorella ha compiu gli anni\name
+              ..io li compirò il mese prossimo"
+         
