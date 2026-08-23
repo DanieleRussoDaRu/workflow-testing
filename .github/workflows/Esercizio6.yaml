@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print
-        run: echo "Hello world, but my variable is ${{ github.env.custom }}"
-        env:
-          CUSTOM: "Daniele"
+        run: |
+          echo "Hello world, but my variable is -> ${{ github.event.custom_event }}"
+          echo "Let's try our new event -> ${{ github.event.passed_testing }}
+
         
