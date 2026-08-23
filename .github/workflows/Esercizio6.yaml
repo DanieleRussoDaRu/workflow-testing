@@ -11,6 +11,6 @@ jobs:
       - name: Print
         run: |
           echo "Hello world, but my variable is -> ${{ github.event.client_payload.custom_event }}"
-          echo "Let's try our new event -> ${{ github.event.client_payload.passed_testing }}
+          echo "Let's try our new event -> ${{ github.event.client_payload.passed_testing }}"
 
         
