@@ -1,5 +1,5 @@
 name: Esercizio 2 - Variabili
-on: [push]
+on: workflow_dispatch
 jobs: 
   job-variabili:
     runs-on: ubuntu-latest

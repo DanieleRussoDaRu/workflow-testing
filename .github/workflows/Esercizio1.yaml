@@ -1,5 +1,5 @@
 name: Esercizio 1 - Hello World
-on: [push]
+on: workflow_dispatch
 
 jobs:
   welcome-job:

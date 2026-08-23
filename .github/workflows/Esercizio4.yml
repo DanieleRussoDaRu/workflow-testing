@@ -1,5 +1,5 @@
 name: Esercizio 4 - Matrix
-on: push
+on: workflow_dispatch
 
 jobs:
   test-matrix:

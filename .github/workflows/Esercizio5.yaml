@@ -1,5 +1,5 @@
 name: Esercizio 5 - Multidimensional matrix
-on: [workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   build-and-test:

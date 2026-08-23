@@ -1,5 +1,5 @@
 name: Esercizio 3 - Pipeline
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build-job:
