@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Print
         run: |
-          echo "Hello world, but my variable is -> ${{ github.event.custom_event }}"
-          echo "Let's try our new event -> ${{ github.event.passed_testing }}
+          echo "Hello world, but my variable is -> ${{ github.event.client_payload.custom_event }}"
+          echo "Let's try our new event -> ${{ github.event.client_payload.passed_testing }}
 
         
