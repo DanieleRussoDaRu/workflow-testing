@@ -1,0 +1,15 @@
+name: Esercizio 6 - Repository dispatcher
+on: 
+  repository_dispatch:
+    types:
+      - deploy_app
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "Hello world, but my variable is ${{ github.env.custom }}"
+        env:
+          CUSTOM: "Daniele"
+        
