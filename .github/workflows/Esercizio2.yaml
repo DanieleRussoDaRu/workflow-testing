@@ -10,4 +10,4 @@ jobs:
       - name: Stampa a schermo una certa variabile
         env:
           UTENTE: Daniele
-        run: echo Ciao $UTENTE, come ti senti oggi?
+        run: echo Ciao $UTENTE, come ti senti oggi? 

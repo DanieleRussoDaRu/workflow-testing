@@ -16,4 +16,4 @@ jobs:
     needs: build-job
     steps:
       - name: Testi unitari
-        run: echo "Esecuzione dei test unitari.."
+        run: echo "Esecuzione dei test unitari.." 

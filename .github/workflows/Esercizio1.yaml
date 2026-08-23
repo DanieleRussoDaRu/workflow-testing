@@ -12,5 +12,5 @@ jobs:
         run: |
           echo Oggi è stata una bella giornata
           echo mia sorella ha compiu gli anni
-          echo io li compirò il mese prossimo
+          echo io li compirò il mese prossimo 
          
