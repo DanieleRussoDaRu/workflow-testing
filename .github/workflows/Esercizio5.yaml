@@ -19,4 +19,4 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
 
       - name: Print result
-        run: echo "Building on OS: ${{ matrix.os }} with .NET ${{ matrix.dotnet-version }}"
+        run: echo "Building on OS= ${{ matrix.os }} with .NET ${{ matrix.dotnet-version }}"
