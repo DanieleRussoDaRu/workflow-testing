@@ -1,0 +1,20 @@
+name: testing
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout directory
+        uses: actions/checkout@v4
+
+      # 1. Aggiungiamo un ID allo step per poter leggere i suoi output
+      - name: Esegui la custom action
+        id: mia-action-step
+        uses: danielerussodaru/custom-action@v3
+
+      # 2. Utilizziamo l'output 'output-message' nello step successivo
+      - name: Leggi e stampa l'output dell'action
+        run: |
+          echo "L'output ricevuto è: ${{ steps.mia-action-step.outputs.output-message }}"
