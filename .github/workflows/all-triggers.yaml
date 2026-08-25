@@ -1,0 +1,20 @@
+name: "Full trigger workflow"
+description: "Workflow that uses all the available triggers"
+
+on:
+  schedule: # activation every 5 minutes
+    - cron: "*/5 * * * *"
+    - cron: "0 * * * 1,3"
+  workflow_dispatch: 
+    
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout the repository"
+        uses: actions/checkout@v6
+
+      - name: "Message"
+        run: echo "My github token is $GITHUB_TOKE"
+    
