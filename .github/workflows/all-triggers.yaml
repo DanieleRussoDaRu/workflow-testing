@@ -3,9 +3,12 @@ description: "Workflow that uses all the available triggers"
 
 on:
   schedule: # activation every 5 minutes
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
     - cron: "0 * * * 1,3"
   workflow_dispatch: 
+  branch_protection_rule:
+    types: [deleted, created]
+  
     
 
 jobs:
@@ -16,5 +19,15 @@ jobs:
         uses: actions/checkout@v6
 
       - name: "Message"
-        run: echo "My github token is $GITHUB_TOKE"
+        run: |
+          echo "My github token is $GITHUB_TOKEN"
+          echo "github.repository ${{github.repository}}"
+          echo "github.action ${{github.action}}"
+          echo "github.workflow ${{github.workflow}}"
+          echo "github.env ${{github.env}}"
+          echo "github.action_path ${{github.action_path}}"
+          echo "github.action_status ${{github.action_status}}"
+          echo "github.action_ref ${{github.action_ref}}"
+          echo "github.action_repository ${{github.action_repository}}"
+          echo "github.actor ${{github.actor}}"
     
