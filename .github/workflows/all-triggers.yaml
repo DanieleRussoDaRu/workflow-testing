@@ -8,6 +8,8 @@ on:
   workflow_dispatch: 
   branch_protection_rule:
     types: [deleted, created]
+  create: 
+  gollum: 
   
     
 
