@@ -36,5 +36,5 @@ jobs:
           echo "github.action_repository ${{github.action_repository}}"
           echo "github.actor ${{github.actor}}"
           echo "vars.daniele_variable=${{ vars.DANIELE_VARIABLE }}"
-          echo "secrets.daniele_secret=${{ secrets.DANIELE_SECRET }}
+          echo "secrets.daniele_secret=${{ secrets.DANIELE_SECRET }}"
     
