@@ -18,7 +18,7 @@ on:
 jobs:
   print-message:
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.assignee == github.actor}} 
+  # if: ${{ github.event.issue.assignee == github.actor}} 
     steps:
       - name: "Checkout the repository"
         uses: actions/checkout@v6
