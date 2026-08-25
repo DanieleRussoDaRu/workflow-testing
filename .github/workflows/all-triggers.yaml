@@ -10,12 +10,15 @@ on:
     types: [deleted, created]
   create: 
   gollum: 
+  issues:
+    types: [opened, closed, assigned]
   
     
 
 jobs:
   print-message:
     runs-on: ubuntu-latest
+    if: ${{ github.event.issue.assignee == github.actor}} 
     steps:
       - name: "Checkout the repository"
         uses: actions/checkout@v6
