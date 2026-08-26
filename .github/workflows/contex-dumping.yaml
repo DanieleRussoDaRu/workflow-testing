@@ -43,5 +43,5 @@ jobs:
       - name: 'sarà snello panza?'
         run: |
           echo "${{ env.brand_new_key }} e ${{env.old_key}}"
-          echo "${{env.old_key}}
+          echo "${{env.old_key}}"
           
