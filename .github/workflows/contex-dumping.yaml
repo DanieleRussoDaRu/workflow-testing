@@ -1,22 +1,26 @@
-name: Context testing
+name: Context dumping
 on: workflow_dispatch
 
+env:
+  brand_new_key: 'ciccio'
+  old_key: 'panza'
+  
 jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
+      #- name: Dump GitHub context
+      #  env:
+      #    GITHUB_CONTEXT: ${{ toJson(github) }}
+      #  run: echo "$GITHUB_CONTEXT"
+      # - name: Dump job context
+      #  env:
+      #    JOB_CONTEXT: ${{ toJson(job) }}
+      #  run: echo "$JOB_CONTEXT"
+      # - name: Dump steps context
+      #  env:
+      #    STEPS_CONTEXT: ${{ toJson(steps) }}
+      #  run: echo "$STEPS_CONTEXT"
       - name: Dump runner context
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
@@ -29,3 +33,15 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+
+      - name: 'Ciccio panza step'
+        run: |
+          echo "la nuova chiave è ${{env.brand_new_key}}"
+        env:
+          brand_new_key: 'snello'
+
+      - name: 'sarà snello panza?'
+        run: |
+          echo "${{ env.brand_new_key }} e ${{env.old_key}}"
+          echo "${{env.old_key}}
+          
