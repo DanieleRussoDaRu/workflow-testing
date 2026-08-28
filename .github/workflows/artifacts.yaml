@@ -26,5 +26,5 @@ jobs:
           path: path/artifacts/world.txt
 
       - name: "read artifact"
-        run: cat path/artifacts/world.txt
+        run: cat ./path/artifacts/world.txt
         
