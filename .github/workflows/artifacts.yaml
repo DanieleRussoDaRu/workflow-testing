@@ -1,0 +1,30 @@
+name: "artifacts"
+on: push
+
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:  
+      - name: "directory creation"
+        run: |
+          mkdir -p path/artifacts
+          echo "Hello daniele this is an artifact" > path/artifacts/world.txt
+          
+      - name: "uploading artifact"   
+        uses: actions/upload-artifact@v4
+        with:
+          name: "my-artifact"
+          path:  path/artifacts/world.txt 
+
+  get-artifact:
+    runs-on: ubuntu-latest
+    needs: upload-artifact
+    steps:
+      - name: "download-artifact"
+        uses: actions/download-artifact@v4
+        with:
+          path: path/artifacts/world.txt
+
+      - name: "read artifact"
+        run: cat path/artifacts/world.txt
+        
