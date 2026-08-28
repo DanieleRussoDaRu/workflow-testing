@@ -14,7 +14,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "my-artifact"
-          path:  path/artifacts/world.txt 
+          path:  path/artifacts/world.txt
+          archive: false
 
   get-artifact:
     runs-on: ubuntu-latest
@@ -25,6 +26,9 @@ jobs:
         with:
           path: path/artifacts
 
-      - name: "read artifact"
-        run: cat ./path/artifacts/world.txt
+      - run: |
+          cd path/artifacts
+          ls
+      #- name: "read artifact"
+      # run: cat ./path/artifacts/world.txt
         
