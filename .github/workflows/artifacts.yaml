@@ -23,7 +23,7 @@ jobs:
       - name: "download-artifact"
         uses: actions/download-artifact@v4
         with:
-          path: path/artifacts/world.txt
+          path: path/artifacts
 
       - name: "read artifact"
         run: cat ./path/artifacts/world.txt
