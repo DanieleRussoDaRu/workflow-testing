@@ -29,6 +29,6 @@ jobs:
       - run: |
           cd path/artifacts
           ls
-      #- name: "read artifact"
-      # run: cat ./path/artifacts/world.txt
+      - name: "read artifact"
+        run: cat ./path/artifacts/world.txt
         
